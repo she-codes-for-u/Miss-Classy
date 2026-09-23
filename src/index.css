@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.splash-screen {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 100svh;
+  background: url("/images/landing-desktop.jpg") center / cover no-repeat;
+  overflow: hidden;
+}
+
+.splash-screen p {
+  position: absolute;
+  left: 50%;
+  bottom: 20%;
+  transform: translateX(-50%);
+  margin: 0;
+  color: #ff69b4;
+  font-size: 24px;
+  font-weight: 500;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .splash-screen {
+    background-image: url("/images/landing-mobile.png");
+  }
+
+  .splash-screen p {
+    font-size: 20px;
+    bottom: 20%;
+  }
+}
