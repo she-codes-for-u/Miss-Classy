@@ -44,7 +44,7 @@ body {
   color: #fff;
   text-align: center;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .navbar {
@@ -76,7 +76,7 @@ body {
   background: none;
   color: #111;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   white-space: nowrap;
 }
@@ -132,7 +132,7 @@ body {
   }
 
   .navbar-links button {
-    font-size: 7px;
+    font-size: 11px;
   }
 
   .icon-button {
@@ -155,3 +155,10 @@ body {
 }
 
 
+
+
+
+
+
+
+.classic-frame { width: min(90%, 1100px); aspect-ratio: 16 / 9; margin: 20px auto; border: 2px solid #fff; overflow: hidden; }

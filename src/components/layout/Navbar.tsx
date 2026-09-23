@@ -7,13 +7,10 @@ const Navbar = () => (
 
       <div className="navbar-links">
         <button>Home</button>
+        <button>Pre-Order</button>
         <button>Shop</button>
         <button>Categories</button>
         <button>New Arrivals</button>
-        <button>Hot Deals</button>
-        <button>Pre-Order</button>
-        <button>Contact Us</button>
-        <button>About Us</button>
 
         <button className="icon-button" aria-label="Search">
           <svg viewBox="0 0 24 24">
@@ -26,13 +23,6 @@ const Navbar = () => (
           <svg viewBox="0 0 24 24">
             <circle cx="12" cy="8" r="4" />
             <path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7" />
-          </svg>
-        </button>
-
-        <button className="icon-button" aria-label="Inbox">
-          <svg viewBox="0 0 24 24">
-            <rect x="3" y="5" width="18" height="14" rx="2" />
-            <path d="m3 7 9 6 9-6" />
           </svg>
         </button>
 
@@ -49,3 +39,7 @@ const Navbar = () => (
 );
 
 export default Navbar;
+
+
+
+
