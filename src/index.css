@@ -91,12 +91,13 @@ body {
   right: 30px;
   top: 50%;
   transform: translateY(-50%);
-  width: 290px;
+  width: 250px;
   height: 190px;
   background: #78023d;
   margin: 0px ;
   margin-right: 0px;
   margin-left: 5px;
+  margin-bottom: 20px;
   color: white;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
   ;
