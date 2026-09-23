@@ -11,7 +11,6 @@ body,
 }
 
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
 }
 
@@ -40,33 +39,93 @@ body {
 .notice-bar {
   width: 100%;
   padding: 8px 20px;
-  background: #ff69b4;
+  background: #78023d;
   color: #fff;
   text-align: center;
   font-size: 12px;
   font-weight: 700;
+  overflow: hidden;
+}
+
+.notice-track {
+  display: inline-block;
+  white-space: nowrap;
+  animation: notice-move 8s linear infinite;
+}
+
+@keyframes notice-move {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 .navbar {
+  position: relative;
   width: 100%;
-  padding: 16px 5%;
+  min-height: 70px;
+  padding: 12px 4%;
   display: flex;
   align-items: center;
   background: #fff;
+  border-bottom: 1px solid #eee
+}
+.hero-image-container {
+  width: 100%;
+  height: 300px;
+  margin: 0px ;
+  margin-right: 0px;
+  border: 1px solid #eee;
+  overflow: hidden;
+  background: #fff;
+  background-image: url("/public/images/landingpage.png");
+  background-size: 100% 100%;
+  background-position: center;
+
+}
+.hero-text-box {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 290px;
+  height: 190px;
+  background: #78023d;
+  margin: 0px ;
+  margin-right: 0px;
+  margin-left: 5px;
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  ;
+  border-radius: 1px solid white
+  ;
+}
+.hero-text-box h1 {
+  font-size: 20px;
 }
 
-.navbar-logo {
-  width: 120px;
-  height: auto;
+.hero-text-box p {
+  font-size: 14px;
+}
+.menu-button {
   flex-shrink: 0;
-  margin-right: 35px;
+  padding: 2px;
+  border: 0;
+  background: transparent;
+  color: #111;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
 }
 
 .navbar-links {
   display: flex;
   align-items: center;
-  gap: 18px;
-  flex: 1;
+  gap: clamp(10px, 2vw, 24px);
+  margin-left: auto;
 }
 
 .navbar-links button {
@@ -109,30 +168,78 @@ body {
   stroke-width: 1.7;
 }
 
-.navbar-links .icon-button:first-of-type {
-  margin-left: auto;
+.navbar-logo {
+  width: 120px;
+  height: auto;
+  margin-left: 30px;
+  flex-shrink: 0;
 }
 
-.navbar-links .icon-button {
-  margin-left: 0;
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 4%;
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  padding: 12px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 20;
 }
 
-@media (max-width: 768px) {
+.mobile-menu button {
+  position: relative;
+  padding: 10px;
+  border: 0;
+  background: none;
+  color: #111;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mobile-menu button::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  bottom: 5px;
+  width: 0;
+  height: 2px;
+  background: #ff69b4;
+  transition: width 0.25s ease;
+}
+
+.mobile-menu button:hover::after {
+  width: calc(100% - 16px);
+}
+
+.classic-frame {
+  width: min(90%, 1100px);
+  aspect-ratio: 16 / 9;
+  margin: 20px auto;
+  border: 2px solid #fff;
+  overflow: hidden;
+}
+
+@media (max-width: 668px) {
   .navbar {
-    padding: 10px 2%;
-  }
-
-  .navbar-logo {
-    width: 60px;
-    margin-right: 8px;
+    min-height: 60px;
+    padding: 10px 3%;
   }
 
   .navbar-links {
     gap: 6px;
   }
 
-  .navbar-links button {
-    font-size: 11px;
+  .navbar-links button:not(.icon-button) {
+    display: none;
+  }
+
+  .navbar-logo {
+    width: 90px;
+    margin-left: 12px;
   }
 
   .icon-button {
@@ -140,8 +247,12 @@ body {
   }
 
   .icon-button svg {
-    width: 14px;
-    height: 14px;
+    width: 21px;
+    height: 21px;
+  }
+
+  .mobile-menu {
+    left: 3%;
   }
 
   .splash-screen {
@@ -153,12 +264,3 @@ body {
     bottom: 20%;
   }
 }
-
-
-
-
-
-
-
-
-.classic-frame { width: min(90%, 1100px); aspect-ratio: 16 / 9; margin: 20px auto; border: 2px solid #fff; overflow: hidden; }
