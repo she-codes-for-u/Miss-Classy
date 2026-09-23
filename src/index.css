@@ -37,7 +37,113 @@ body {
   z-index: 10;
 }
 
+.notice-bar {
+  width: 100%;
+  padding: 8px 20px;
+  background: #ff69b4;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.navbar {
+  width: 100%;
+  padding: 16px 5%;
+  display: flex;
+  align-items: center;
+  background: #fff;
+}
+
+.navbar-logo {
+  width: 120px;
+  height: auto;
+  flex-shrink: 0;
+  margin-right: 35px;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex: 1;
+}
+
+.navbar-links button {
+  position: relative;
+  padding: 4px 0;
+  border: 0;
+  background: none;
+  color: #111;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.navbar-links button:not(.icon-button)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: #ff69b4;
+  transition: width 0.25s ease;
+}
+
+.navbar-links button:not(.icon-button):hover::after {
+  width: 100%;
+}
+
+.icon-button {
+  flex-shrink: 0;
+  padding: 4px;
+}
+
+.icon-button svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+}
+
+.navbar-links .icon-button:first-of-type {
+  margin-left: auto;
+}
+
+.navbar-links .icon-button {
+  margin-left: 0;
+}
+
 @media (max-width: 768px) {
+  .navbar {
+    padding: 10px 2%;
+  }
+
+  .navbar-logo {
+    width: 60px;
+    margin-right: 8px;
+  }
+
+  .navbar-links {
+    gap: 6px;
+  }
+
+  .navbar-links button {
+    font-size: 7px;
+  }
+
+  .icon-button {
+    padding: 2px;
+  }
+
+  .icon-button svg {
+    width: 14px;
+    height: 14px;
+  }
+
   .splash-screen {
     background-image: url("/images/landing-mobile.png");
   }
@@ -47,3 +153,5 @@ body {
     bottom: 20%;
   }
 }
+
+
