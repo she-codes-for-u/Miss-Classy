@@ -23,6 +23,10 @@ const App = () => {
       <p> Discover cute, affordable 
         everyday products of  your choice 
       </p>
+      <div>
+     <button className="shop-button">Shop Now</button>
+<button className="newsletter-button">Subscribe to Newsletter</button>
+      </div>
   </div>
   </>
 );
