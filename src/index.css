@@ -124,7 +124,14 @@ body {
   cursor: pointer;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
+@media (max-width: 668px) {
+  .newsletter-button {
+    padding: 5px 8px;
+    font-size: 8px;
+    transform: translateY(-3px);
+    margin-bottom: 10px;
+  }
+}
 @media (max-width: 668px) {
   .hero-buttons {
     display: flex;
@@ -312,22 +319,74 @@ body {
 }
 
 .category-section h2 {
-  margin: 20px 0;
+  margin: 40px 0;
   font-size: 24px;
 }
 .category-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
-  width: 90%;
+  width: 75%;
   max-width: 1100px;
   margin: 25px auto;
 }
-
 .category-card {
-  aspect-ratio: 1 / 1;
-  border: 1px solid #eee;
+  position: relative;
+  aspect-ratio: 1 / 1.1;;
+  border: 0px solid #eee;
   background: #f8f8f8;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 7px;
+  overflow: hidden;
+  
+}
+.category-image {
+  width: 100%;
+  height: calc(100% - 32px);
+  overflow: hidden;
+  border: 2px solid #ffb6c1;
+  box-sizing: border-box;
+}
+
+.category-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.category-card span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 6px 0px;
+  background: white;
+  color: black;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+  font-size: 10px;
+  font-weight: 700;
+   border-radius: 8px 8px 0 0;
+}
+@media (max-width: 668px) {
+  .category-grid {
+    width: 95%;
+    gap: 8px;
+  }
+
+  .category-card {
+    aspect-ratio: 1 / 1.1;
+  }
+
+  .category-image {
+    height: calc(100% - 28px);
+  }
+
+  .category-card span {
+    height: 28px;
+    font-size: 9px;
+  }
 }
 .category-shop-button {
   position: absolute;
@@ -341,4 +400,66 @@ body {
   font-size: 10px;
   font-weight: 700;
   cursor: pointer;
+}
+
+.reach-section {
+  text-align: center;
+  padding: 35px 20px;
+}
+
+.reach-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 30px 20px;
+}
+
+.reach-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 30px 5%;
+}
+
+.reach-section h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-links a {
+  display: flex;
+  width: 22px;
+  height: 22px;
+}
+
+.social-links svg {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 668px) {
+  .reach-section {
+    padding: 25px 3%;
+  }
+
+  .reach-section h2 {
+    font-size: 13px;
+  }
+
+  .social-links {
+    gap: 9px;
+  }
+
+  .social-links a {
+    width: 24px;
+    height: 24px;
+  }
 }
