@@ -566,3 +566,9 @@ body {
     height: 160px;
   }
 }
+
+@media (max-width: 668px) {
+  .hero-text-box {
+    transform: translateY(calc(-50% - 45px));
+  }
+}
