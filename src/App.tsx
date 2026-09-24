@@ -18,14 +18,14 @@ const App = () => {
     <div className="hero-image-container" />
     <div className="hero-text-box">
       <h1>Everthing classy
-        All In One Place
+        All In One Place.
       </h1>
-      <p> Discover cute, affordable 
+      <p> Discover cute, affordable and carefully
         everyday products of  your choice 
       </p>
       <div>
-     <button className="shop-button">Shop Now</button>
-<button className="newsletter-button">Subscribe to Newsletter</button>
+     
+<button className="newsletter-button">Subscribe to our Newsletter</button>
       </div>
   </div>
   </>
