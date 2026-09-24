@@ -29,6 +29,12 @@ const Navbar = () => {
               <path d="m20 20-4-4" />
             </svg>
           </button>
+          <button className="icon-button newsletter-icon" aria-label="Newsletter">
+            <svg viewBox="0 0 24 24">
+              <rect x="3" y="5" width="18" height="14" rx="2" />
+              <path d="m4 7 8 6 8-6" />
+            </svg>
+          </button>
 
           <button className="icon-button" aria-label="Profile">
             <svg viewBox="0 0 24 24">
