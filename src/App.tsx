@@ -20,7 +20,7 @@ const App = () => {
       <h1>Everthing classy
         All In One Place.
       </h1>
-      <p> Discover cute, affordable and carefully
+      <p> Discover cute, affordable and carefully selected 
         everyday products of  your choice 
       </p>
       <div>
@@ -28,6 +28,17 @@ const App = () => {
 <button className="newsletter-button">Subscribe to our Newsletter</button>
       </div>
   </div>
+<section className="category-section">
+  <h2>Shop by Category</h2>
+
+  <div className="category-grid">
+    {Array.from({ length: 8 }).map((_, index) => (
+      <div className="category-card" key={index}>
+        <button className="category-shop-button">Shop Now</button>
+      </div>
+    ))}
+  </div>
+</section>
   </>
 );
 }

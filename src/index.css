@@ -78,7 +78,7 @@ body {
   height: 300px;
   margin: 0px ;
   margin-right: 0px;
-  border: 2px solid #eee;
+  border: 0px solid #eee;
   overflow: hidden;
   background: #fff;
   background-image: url("/public/images/landingpage.png");
@@ -305,4 +305,40 @@ body {
     font-size: 20px;
     bottom: 20%;
   }
+}
+.category-section {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.category-section h2 {
+  margin: 20px 0;
+  font-size: 24px;
+}
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  width: 90%;
+  max-width: 1100px;
+  margin: 25px auto;
+}
+
+.category-card {
+  aspect-ratio: 1 / 1;
+  border: 1px solid #eee;
+  background: #f8f8f8;
+}
+.category-shop-button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background: #ffb6c1;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
 }
